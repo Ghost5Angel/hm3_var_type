@@ -10,7 +10,7 @@ public class Main {
         short shortVar = 32767;
         System.out.println("Значение переменной shortVar с типом short " + shortVar + " равно");
 
-        long longVar = 922337203;
+        long longVar = 9223272036854775808L;
         System.out.println("Значение переменной longVar с типом long " + longVar + " равно");
 
         float floatVar = 32767;
@@ -23,7 +23,7 @@ public class Main {
         System.out.println("Задача 2");
         float n1 = 27.12f;
         System.out.println("Значение переменной n1 с типом float " + n1 + " равно");
-        long n2 = 987678965; //ругается, что большое число: java: integer number too large
+        long n2 = 987678965549L;
         System.out.println("Значение переменной n2 с типом long " + n2 + " равно");
         float n3 = 2.786f;
         System.out.println("Значение переменной n3 с типом float " + n3 + " равно");
@@ -40,8 +40,8 @@ public class Main {
         int ludmila = 23;
         int anna = 27;
         int katy = 30;
-        float paper = 480;
-        float res = paper / (ludmila+anna+katy);
+        int paper = 480;
+        int res = paper / (ludmila+anna+katy);
         System.out.println("На каждого ученика рассчитано " + res + " листов бумаги");
 
         System.out.println("Задача 4");
@@ -73,18 +73,21 @@ public class Main {
         System.out.println(ice);
         float eggs = 4 * 0.070f;
         System.out.println(eggs);
-        float weight = bananas+milk+ice+eggs;
-        System.out.println("Вес завтрака " + weight + " килограмм");
+        float weight = bananas + milk + ice + eggs;
+
+        int kg = (int) weight;
+        int grams = (int) ((weight - kg) * 1000);
+        System.out.println("Вес завтрака " + kg + " килограмм " + grams + " грамм");
 
         System.out.println("Задача 7");
-        float desiredWeight = 7;
-        float weight250gr = 250;
-        float weight500gr = 500;
-        float day250gr = desiredWeight / weight250gr * 1000;
+        int desiredWeight = 7;
+        int weight250gr = 250;
+        int weight500gr = 500;
+        int day250gr = (desiredWeight*1000) / weight250gr;
         System.out.println("Чтобы сбросить " + desiredWeight + " килограмм, при потери веса в " + weight250gr + " нужно "+ day250gr + " дней");
-        float day500gr = desiredWeight / weight500gr * 1000;
+        int day500gr = (desiredWeight*1000)  / weight500gr;
         System.out.println("Чтобы сбросить " + desiredWeight + " килограмм, при потери веса в " + weight500gr + " нужно "+ day500gr + " дней");
-        float sredDay = (day250gr + day500gr) / 2;
+        int sredDay = (day250gr + day500gr) / 2;
         System.out.println("В среднем потребуется " + sredDay + " дней");
 
         System.out.println("Задача 8 ");
@@ -95,15 +98,15 @@ public class Main {
 
         float masha10 = masha + (masha * percent);;
         float masha10Year = (masha10 - masha) * 12 ;
-        System.out.println("Маша теперь получает " + masha10 + "рублей. Годовой доход вырос на " + masha10Year + "рублей");
+        System.out.println("Маша теперь получает " + masha10 + "рублей. Годовой доход вырос на " + masha10Year + " рублей");
 
         float den10 = den + (den * percent);
         float den10Year = (den10 - den) * 12;
-        System.out.println("Маша теперь получает " + den10 + "рублей. Годовой доход вырос на " + den10Year + "рублей");
+        System.out.println("Маша теперь получает " + den10 + "рублей. Годовой доход вырос на " + den10Year + " рублей");
 
         float kristina10 = kristina + (kristina * percent);
         float kristina10Year = (kristina10 - kristina) * 12 ;
-        System.out.println("Маша теперь получает " + kristina10 + "рублей. Годовой доход вырос на " + kristina10Year + "рублей");
+        System.out.println("Маша теперь получает " + kristina10 + "рублей. Годовой доход вырос на " + kristina10Year + " рублей");
 
 
 

@@ -13,7 +13,7 @@ public class Main {
         long longVar = 9223272036854775808L;
         System.out.println("Значение переменной longVar с типом long " + longVar + " равно");
 
-        float floatVar = 32767;
+        float floatVar = 32767f;
         System.out.println("Значение переменной floatVar с типом float " + floatVar + " равно");
 
         double doubleVar = 922337203;
